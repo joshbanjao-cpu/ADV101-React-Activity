@@ -1,0 +1,47 @@
+* { box-sizing: border-box; }
+body { margin: 0; background: #f4f6fa; color: #182235;
+font-family: Arial, sans-serif; line-height: 1.5; }
+button, input { font: inherit; }
+button { padding: 10px 16px; background: #2563eb; color: white;
+border: 0; border-radius: 8px; cursor: pointer; }
+button:hover { opacity: .9; }
+button.secondary { background: #e2e8f0; color: #1e293b; }
+button.danger { background: #dc2626; }
+.dashboard { width: min(1100px,92%); margin: 40px auto; }
+.dashboard-header { margin-bottom: 28px; }
+.eyebrow { color: #2563eb; text-transform: uppercase;
+font-weight: bold; letter-spacing: 1px; }
+.dashboard-header h1 { font-size: clamp(28px,4vw,40px); margin: 0; }
+.stats { display: grid; grid-template-columns: repeat(3,1fr);
+gap: 16px; margin-bottom: 24px; }
+.stat-card, .panel, .course-card { background: white; padding: 20px;
+border: 1px solid #e2e8f0; border-radius: 12px; }
+.stat-card { display: flex; flex-direction: column; gap: 8px; }
+.stat-card strong { color: #2563eb; font-size: 30px; }
+.panel { margin-bottom: 24px; }
+.form-grid { display: grid; grid-template-columns: 1fr 2fr;
+gap: 16px; margin-bottom: 16px; }
+label { display: flex; flex-direction: column; gap: 6px; }
+input { width: 100%; padding: 12px; border: 1px solid #cbd5e1;
+border-radius: 8px; }
+input:focus-visible, button:focus-visible { outline: 3px solid #93c5fd;
+outline-offset: 2px; }
+.section-heading { display: flex; justify-content: space-between;
+align-items: center; gap: 16px; margin-bottom: 20px; }
+.course-list { display: grid; gap: 12px; }
+.course-card { display: flex; justify-content: space-between; gap: 16px; }
+.course-card h3 { margin: 0; }
+.course-card p { margin: 6px 0 14px; }
+.card-actions { display: flex; align-items: center; gap: 8px; }
+.status { display: inline-block; padding: 4px 10px; border-radius: 20px;
+font-size: 12px; font-weight: bold; }
+.status.active { background: #dbeafe; color: #1d4ed8; }
+.status.completed { background: #dcfce7; color: #166534; }
+.message { color: #1d4ed8; margin-top: 16px; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden;
+clip: rect(0,0,0,0); white-space: nowrap; }
+@media(max-width:700px) {
+.stats, .form-grid { grid-template-columns: 1fr; }
+.section-heading, .course-card { flex-direction: column; align-items: stretch; }
+.card-actions { flex-wrap: wrap; }
+}
